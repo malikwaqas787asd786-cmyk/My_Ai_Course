@@ -1,0 +1,46 @@
+""""Broadcasting and Vectorization in NumPy"""
+                       #Broadcasting
+#Matching Dimensions 
+import numpy as np
+# Both arrays have the same shape (2x3)
+arr1 = np.array([[1, 2, 3], [4, 5, 6]])
+arr2 = np.array([[7, 8, 9], [10, 11, 12]])
+result = arr1 + arr2
+print(result)
+
+arr1 = np.array([[1, 2, 3], [4, 5, 6]])
+arr2 = np.array([10, 20, 30])  # Shape (3,) is compatible with shape (2,3) for broadcasting
+result = arr1 * arr2
+print(result)
+
+
+#Expanding Single Element to Match Dimensions
+import numpy as np
+arr1 = np.array([[1, 2, 3], [4, 5, 6]])
+arr2 = np.array([10])  # Single element array
+print(arr1+arr2)  # The single element is broadcasted to match the shape of arr1
+
+arr1 = np.array([[1, 2, 3], [4, 5, 6]])
+arr2 = np.array([[10], [20]])  # Shape (2,1) is compatible with shape (2,3) for broadcasting
+print(arr1*arr2)  # The (2,1) array is broadcasted to match the shape of arr1
+
+#Incompatible Shapes
+import numpy as np
+arr1 = np.array([[1, 2, 3], [4, 5, 6]])
+arr2 = np.array([10, 20])  # Shape (2,) is not compatible with shape (2,3)
+
+result = arr1 + arr2
+print(result)  # This will raise a ValueError due to incompatible shapes
+
+
+#Vectorization
+import numpy as np
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.array([10, 20, 30, 40, 50])
+result = arr1 * arr2  # Element-wise multiplication
+print(result)
+
+arr1 = np.array([[1, 2, 3], [4, 5, 6]])
+arr2 = np.array([[10, 20, 30], [40, 50, 60]])
+result = arr1 + arr2  # Element-wise addition
+print(result)

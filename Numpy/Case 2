@@ -1,0 +1,146 @@
+"""Numpy Array Properties"""
+from tokenize import Number
+
+import numpy as np
+a=np.array([[1,2,3],
+            [4,5,6],
+            [7,8,9]])
+print(a)
+
+#Shape of the array
+import numpy as np
+a=np.array([[1,2,3],
+            [4,5,6],
+            [7,8,9]])
+print(a.shape)  #shape of the array (rows, columns)
+
+#Size of the array
+import numpy as np
+a=np.array([[1,2,3],
+            [4,5,6],
+            [7,8,9]])
+print(a.size)   #total number of elements in the array
+
+#Data type of the array
+import numpy as np
+arr_1=np.array([[1,2,3],
+            [4,5,6],
+            [7,8,9]])
+arr_2=np.array([[1.0,2.0,3.0]])
+print(arr_1.dtype)  #data type of the elements in the array
+print(arr_2.dtype) 
+
+arr=np.array([1.0, 2.0, 3.0])
+int_arr=arr.astype(int)  #convert the array to integer type
+print(int_arr)
+print(int_arr.dtype)  #data type of the new array
+
+
+#Number of dimensions of the array
+import numpy as np
+arr_1d=np.array([1,2,3,4])
+arr_2d=np.array([[1,2,3],
+                 [4,5,6]])
+arr_3d=np.array([[[1,2,3],
+                  [4,5,6],
+                  [7,8,9]]])
+
+print(arr_1d.ndim)   #number of dimensions of the array
+print(arr_2d.ndim)
+print(arr_3d.ndim)
+
+
+"""Operators on Numpy Arrays"""
+
+#Arithemetic Operators
+import numpy as np
+a=np.array([1,2,3])
+b=np.array([4,5,6])
+print(a+b)  #element-wise addition
+print(a-b)  #element-wise subtraction
+print(a*b)  #element-wise multiplication
+print(a/b)  #element-wise division
+print(a**2) #element-wise exponentiation
+print(a%2)  #element-wise modulus
+
+#Comparison Operators
+import numpy as np
+a=np.array([1,2,3])
+b=np.array([4,5,6])
+print(a==b)  #element-wise equality
+print(a!=b)  #element-wise inequality
+print(a>2)   #element-wise greater than
+print(a<2)   #element-wise less than
+print(a>=2)  #element-wise greater than or equal to
+print(a<=2)  #element-wise less than or equal to
+
+#Logical Operators
+import numpy as np
+a=np.array([1,2,3])
+b=np.array([4,5,6])
+print(np.logical_and(a>1, b>4))  #element-wise logical AND
+print(np.logical_or(a>1, b>4))   #element-wise logical OR
+print(np.logical_not(a>1))        #element-wise logical NOT
+
+#Aggregate Functions
+import numpy as np
+a=np.array([10,20,30,40,50])
+
+print(np.sum(a))  #sum of all elements in the array
+print(np.mean(a)) #mean of all elements in the array
+print(np.median(a)) #median of all elements in the array
+print(np.min(a)) #minimum element in the array
+print(np.max(a)) #maximum element in the array
+print(np.std(a)) #standard deviation of the elements in the array
+print(np.var(a)) #variance of the elements in the array
+
+"""Linear Algebra"""
+#Vector(1D array)
+v = np.array([1, 2, 3])
+
+#Matrix(2D array)
+M = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+
+#Dot Product
+v1 = np.array([1, 2, 3])
+v2 = np.array([4, 5, 6])
+result = np.dot(v1, v2)
+print(result)
+print(v1 @ v2)  #alternative syntax for dot product
+
+#Matrix Multiplication
+M1 = np.array([[1, 2],
+                [3, 4]])    
+M2 = np.array([[5, 6],
+                [7, 8]])
+result = np.dot(M1, M2)
+print(result)
+print(M1 @ M2)  #alternative syntax for matrix multiplication
+
+#Transpose of a Matrix
+M = np.array([[1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]])
+arr=np.transpose(M)  #transpose of the matrix
+print(arr)
+
+#Determinant of a Matrix
+arr=np.array([[1, 2],
+              [3, 4]])
+det=np.linalg.det(arr)
+print(det)
+
+#Inverse of a Matrix
+arr=np.array([[1, 2],
+              [3, 4]])
+inv=np.linalg.inv(arr)
+print(inv)
+
+#Eigenvalues and Eigenvectors
+arr=np.array([[1, 2],
+               [3, 4]])
+eigenvals, eigenvecs = np.linalg.eig(arr)
+print("Eigenvalues:", eigenvals)
+print("Eigenvectors:", eigenvecs)

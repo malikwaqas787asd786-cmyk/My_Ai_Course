@@ -1,0 +1,50 @@
+#Q1:Initialize a variable x = 10. Use += to add 5 to it.
+# x=10
+# x+=5
+# print(x)
+# #Q2: Use -= to subtract 3 from a variable price.
+# x = 100
+# x-=3
+# print("Variable price is :",x)
+# #Q3:Multiply a variable balance by 2 using the *= operator.
+# y=10
+# y*=2
+# print(y)
+# #Q4:Divide a variable total by 4 using the /= operator.
+# n=20
+# n/=4
+# print(n)
+# #Q5: Use **= to square a variable.
+# m=6
+# m**=2
+# print("varoable ofa square is :", m)
+# #Q6: Create a counter variable and increment it by 1 using assignment operators.
+# variable=89
+# variable+=1
+# print(variable)
+# #Q7:Use %= to find the remainder of a variable divided by 2 and update the variable.
+# vari=90
+# print("Orignall vari is:",vari)
+# vari %= 2
+# print("remainder after deviding by 2 :",vari)
+
+# #Q8:Use //= to perform floor division on a variable and update it.
+# num1=88
+# num1//=2
+# print(num1)
+
+# #Q9:. Start with n = 2. In three lines of code using assignment operators, turn it into 20.
+# #My method with missing one line of code:
+# n=2
+# n*=10
+# print(n)
+# #Method CPT :
+# n=2
+# n*=5
+# n+=10
+# print(n)
+
+# #Q10: Ask the user for a number, then use += to add 10 to it and print the final result.
+# num=int(input("Enter a number:"))
+# num+=10
+# print(num)

@@ -1,0 +1,389 @@
+Python Notes
+\n sy ik line split ho jati hai
+Jesy ky
+str=("This is a string. We are learning python")
+Isska output This is a string.We are learning python aye ga lykin agar hum issko aisy likh do tu
+str=("This is a string.\n We are learning python output aisy aye ga
+This a string
+We are learning python
+
+
+
+
+Indexing ka matlab 👉 string ke har character ko ek number dena, taake hum usko directly access kar saken
+Python mein indexing 0 se start hoti hai.jesy ky
+s a l o o _ k h a n  (saloo_khan)
+0 1 2 3 4 5 6 7 8 9
+iss string main
+Index ki 2 types hoti hain:
+Positive index start hota hai 0 se (left to right)
+Negative index start hota hai -1 se (right to left)
+
+
+
+Slicing ka matlab hota hai ky Slicing Python mein sequence ka ek hissa (part) nikalne ko kehte hain — jaise string, list ya tuple ka kuch portion lena.
+sequence[start : end]
+start → kaha se shuru karna
+end → kaha tak jana (end index include nahi hota)
+text=python
+print(text[2:])
+print(text[2:len(text)])
+print(text[2:6]
+in teeno cases main jawab same aye ga
+Slicing main bhi 2 types hoti hain index ki tarhan
+Slicing with Positive index start hota hai 0 se (left to right)
+Slicing with Negative index start hota hai -1 se (right to left)
+S A L M A N
+-6-5-4-3-2-1
+
+
+String Functions
+#String Functions
+str="i am studing python from apna college"
+print(str.endswith("college"))   # True  yeah batata hai ky string main yeah word end main aya hai ya nhi phir output main true ya false likh dy ga
+print(str.count("a"))            # 3     yeah batata hai ky string main yeah letter ya word kitni baar repeat hoa hai
+print(str.capitalize())          # I am studing python from apna college   yeah string ka first letter capital kr deta hai
+print(str.find("python"))       # 13     yeah batata hai ky mentioned word kitny index ky baad ata hai
+print(str.replace("am","was"))  # i was studing python from apna college   yeah kisi bhi word ko given word ky sath replace kr deta hai
+print(str.upper())              # I AM STUDING PYTHON FROM APNA COLLEGE    yeah string main sary words ko capital kr deta hai
+print(str.lower())              # i am studing python from apna college    yeah string main sary words ko small letter main badal deta hai
+print(str.title())              # I Am Studing Python From Apna College    yeah string main har words ky first letter ko capital kr deta hai
+
+Indentation ka matlab hota hai ky vs code main 4 times spaces dena ya tab ka use krna "		" yeah tab hota hai
+
+Even / Odd check kaisay kartay hain?
+Rule:
+Number ko 2 se divide karo
+remainder 0 → Even
+remainder 1 → Odd
+Python mein remainder % operator se milta hai jesy ky
+
+num = int(input("Number daalo: "))
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+Positive / Negative check kaisay kartay hain?
+Rule:
+number > 0 → Positive
+number < 0 → Negative
+number == 0 → Zero
+
+Conditional Statements
+if
+if-else
+if-elif-else
+nested if
+nested if-else
+nested if-elif-else
+
+Lists in Python
+
+List ek collection of items hoti hai
+Items changeable (mutable) hote hain → matlab add, remove, modify kar sakte ho lykin strings nhi hoty
+Items ordered hote hain → first item, second item, … same order maintain hota hai
+Syntax: square brackets [ ]
+Example:
+fruits = ["apple", "banana", "cherry"]
+print(fruits[0])  # apple
+fruits.append("mango")  # add new item
+print(fruits)  # ['apple', 'banana', 'cherry', 'mango']
+
+Lists Method
+list=[1,2,3]
+list.append(4) isska matlab hota hai ky yeah list ky end main given element add kr deta hai #[1,2,3,4]
+list.reverse() isska matlab hai ky yeah list ky sary elements reverse kr deta hai #[3,2,1]
+list.extend([4,5]) yeah list main given elements ko add krwa deta hai #[1,2,3,4,5]
+list.insert(,) yeah kisi specific index par given value ko add krta hai
+list.remove()  yeah kisi ko value ko remove kr deta hai
+list.pop()   yeah ksii bhi value ko index sy remove kr deta hai
+list.clear()  yeah pro list ko kahli kr deta hai
+list.index() value ka index bata deta hai
+list.count()  yeah bata hai ky value kitni baar repeat hoe hai
+list.sort()  yeah list ky irregular elements ko arrange krta hai
+list.copy   yeah list ka ik aur duplicate bana deta hai
+Yaad rakhne ka short trick
+Add → append, extend, insert
+Remove → remove, pop, clear
+Check → index, count
+Arrange → sort, reverse
+Safe copy → copy
+
+
+Tuple main agar values ko print krna ho tu uss ky sath , ka use krna parta hai kyon ky aagr value ko aisy hi print kr dyn gy tu usski type change ho jae gi nhi tu jesy ky
+num=(1,) iss case main type tuple aye gi
+num=(1)  iss case main type integer aye gi kyon ky issko string consider kia jae ga
+
+
+Tuple Methods
+Tuples ky sirf 2 hi methods hoty hain kyon ky yeah changeable nhi hoti
+tup.index() yeah batata hai ky item ka phala index kia hai
+nums = (10, 20, 30, 20)
+print(nums.index(20))  # 1
+
+tup.count() yeah batana hai ky item kitni baar aya hai tuple main jesy ky
+nums = (1, 2, 2, 3, 2)
+print(nums.count(2))   # 3
+
+
+
+Dictationaries are unordered in main order nhi hota aur yeah changeable hoty Hain and don't allow the duplicate keys matlab same keys nhi bana sakhty
+Iss main kisi key ko acess krny ky liye [] yeah syntax use hota hai jesy ky print(students[subjects]) ab students variable main key subjects ki sari values list ky form main print ho ja gi
+
+Nested Dictationary ky andar ik aur dictationary hoti hai
+
+Methods of dictationary
+myDict.keys() #returns all keys
+myDict.values() #retun all values
+myDict.items() #return all(key+value) pair as tuples
+myDict.get()  agar kisi bhi key ya value ko access krna ho tu yeah use hota hai
+myDict.update() yeah dictationary ky andar new value ko add or update kr deta hai
+
+Sets
+Sets are mutable aur unordered hoty hain aur aur iss main dictationary aur list ko add nhi krwa sakhty kyon ky yeah dono changeable hain aur iss main hum float boolean integer string tuple ko add krwa sakhty hain
+Sets tu mutable hoty hain lykin ussky elements immutable hoty hain
+syntax={}
+Empty dictationaries main koi value nhi hoti {}
+Set methods
+set.add() #adds the given value in the set
+set.remove() #removes the element
+set.clear() #empties the set
+set.pop() #removes a random value
+set.discard() #removes the given value
+set.update() #ik sy zaida elements add krta hai
+set.union() #combines both set values
+set.intersaction() #common elements from both sets
+set.difference() #jo values set1 main hon lykin set2 main na hon
+set.symmetric_difference() #dono main common ky ilawa elements
+
+
+Loop are used to repeat instruction
+While Loop:
+while loop jab hume code tab tak chalana ho jab tak koi condition true ho.matlab ky pata nhi hota ky code kab tak run hoga
+ Break:
+break ka use loop ko turant rokne ke liye hota hai, chahe condition abhi bhi true ho ya loop complete na hua ho
+i = 1
+while i <= 10:
+    print(i)
+    if i == 5:
+        break   # loop yahan turant ruk jayega
+    i += 1
+
+You said:
+loops samjhao mujy python main
+ChatGPT said:
+Bilkul! Python main loops ka concept samajhna programming main bohot zaroori hai. Main step by step aur simple examples ke saath samjhaata hoon. 😊
+
+1️⃣ Loops kya hain?
+Loops ek tarah ka programming tool hain jo code ko baar-baar repeat karne ke liye use hota hai.
+
+Python main mainly 2 types ke loops hote hain:
+
+for loop – jab hume pata ho kitni baar code chalana hai.
+
+while loop – jab hume code tab tak chalana ho jab tak koi condition true ho.
+
+2️⃣ For Loop
+for loop ka use sequence (list, string, range) par iterate karne ke liye hota hai.
+
+Syntax:
+for variable in sequence:
+    # code jo repeat hoga
+Example 1: List ke elements print karna
+fruits = ["apple", "banana", "mango"]
+
+for fruit in fruits:
+    print(fruit)
+Output:
+
+apple
+banana
+mango
+Example 2: Numbers ke liye range use karna
+for i in range(5):  # 0 se 4 tak
+    print(i)
+Output:
+
+0
+1
+2
+3
+4
+Note: range(5) 0 se start hota hai aur 5 se ek kam tak jaata hai.
+
+3️⃣ While Loop
+while loop ka use tab tak repeat karne ke liye hota hai jab tak condition True ho.
+
+Syntax:
+while condition:
+    # code jo repeat hoga
+Example 1: Simple counting
+i = 0
+while i < 5:
+    print(i)
+    i += 1   # i = i + 1
+Output:
+
+0
+1
+2
+3
+4
+Example 2: User input se loop
+password = ""
+while password != "secret":
+    password = input("Enter password: ")
+print("Access granted!")
+Yeh tab tak repeat hoga jab tak user correct password na daale.
+
+4️⃣ Loop Control Statements
+Python main kuch statements hain jo loop ko control karte hain:
+
+break – loop ko turant rok deta hai.
+
+continue – loop ke current iteration ko skip kar deta hai aur next iteration par chala jaata hai.
+
+pass – placeholder, kuch nahi karta.
+
+Example: break & continue
+for i in range(1, 6):
+    if i == 3:
+        continue   # 3 ko skip karega
+    if i == 5:
+        break      # loop yahan stop hoga
+    print(i)
+Output:
+
+1
+2
+4
+
+Break aur countinue kia hota hai ?
+ChatGPT said:
+Bilkul! 😄 Chalo break aur continue ko Python main simple words aur examples ke saath samajhte hain.
+
+1️⃣ break
+break ka use loop ko turant rokne ke liye hota hai, chahe condition abhi bhi true ho ya loop complete na hua ho.
+
+Example:
+for i in range(1, 10):
+    if i == 5:
+        break   # loop yahan stop hoga
+    print(i)
+Output:
+
+1
+2
+3
+4
+Explanation:
+Jab i 5 ho jata hai, break loop ko turant rok deta hai, aur 5 print nahi hota.
+
+2️⃣ continue
+continue ka use current iteration ko skip karne ke liye hota hai, aur loop agla step continue karta hai.
+
+Example:
+for i in range(1, 6):
+    if i == 3:
+        continue   # 3 ko skip karega
+    print(i)
+Output:
+
+1
+2
+4
+5
+Explanation:
+Jab i 3 hota hai, continue ke wajah se print statement skip ho jaata hai, lekin loop 4 se continue hota hai.
+
+💡 Tip:
+
+break → loop poori tarah rok deta hai
+
+continue → sirf current iteration skip karta hai
+
+Agar chaho, main ek chhoti si diagram bana ke dono ka difference visually bhi dikha sakta hoon.
+Kya main wo bana doon?
+
+You said:
+yaar yeha dono mujhby while loop main us ekr ky dekho
+ChatGPT said:
+Bilkul! 😎 Chalo while loop me break aur continue ka use dekhte hain ek simple example ke saath.
+
+1️⃣ break in while loop
+i = 1
+while i <= 10:
+    print(i)
+    if i == 5:
+        break   # loop yahan turant ruk jayega
+    i += 1
+Output:
+
+1
+2
+3
+4
+5
+Explanation:
+Loop 1 se start hua.
+Jab i 5 hua, break loop ko turant rok diya.
+Isliye 6 se aage print nahi hua.
+
+
+Continue:
+continue ka use current iteration ko skip karne ke liye hota hai, aur loop agla step continue karta hai.continue use karte waqt variable ko increment karna zaroori hai warna loop infinite ho jaayega.
+
+Factorial: 3!=3*2*1
+
+
+Funtions main agar humny koi kaam krwana ho tu ab pahly variable declare krty hain aur uss ky baad unky andar parameter set krty hain matlab jo values variable ky andar likhi hoti hain unko parameters kahty hain jesy ky
+def calcSum(a,b):
+    sum=a+b
+    print(sum)
+    return sum
+
+def calcSum(a,b):
+    return sum     issko function definition khety hain
+(a,b)              issko parameters khety hain
+calcSum(a,b)       issko function call khety hain
+(2,8)              issko arguments khety hain
+
+Types of functions:
+1.Build in Functions  jo already functions main hoty hai
+Common built-in functions:
+print()
+len()
+type()
+sum()
+max()
+min()
+
+2.Defined Functions  jo programmer ya coder khud likhta hai
+Created by the user using def
+
+Recursion ka kaam loops sy aur loops ka kaam recursion sy kia jaa sakhta hai
+Dono main case ko dobara call kia jata hai bar bar
+
+File input/output
+Types of files
+Text files: txt,docx,log etc
+Binary files: mp4,mov,png,jpeg et
+r = read
+w = write
+a = append
+with open() = easy & safe
+Open,read and close the file
+f=open("file_name"'"mode")
+mode=
+r = read
+w = write
+a = append
+
+
+f-string kya hai?
+f-string Python 3.6+ ka feature hai
+f ka matlab hai formatted string
+Tum direct variables ko string ke andar curly braces {} me use kar sakte ho
+Syntax:
+"yeh mera variable = {variable}

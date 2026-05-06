@@ -1,0 +1,87 @@
+#Q1: Compare two numbers entered by the user and print if the first is greater than the second.
+# #Method2:
+# a=int(input("enter num1:"))
+# b=int(input("entre num2:"))
+# print(a > b)
+
+# #Metho2
+# num1=int(input("Enter your first number:"))
+# num=int(input("Enter your second number:"))
+# if (num1>num):
+#     print(True),
+# else:
+#     print(False)
+
+# # #Q2:Check if a user-entered number is even (Number % 2 == 0) and print the Boolean result.
+# #Method1
+# num = int(input("Enter a number: "))
+# is_even = (num % 2 == 0)
+# print(is_even)
+# #Method 2
+# num=int(input("enter a number :"))
+# if (num%2==0):
+#     print(True),
+#     print(type(True)),
+# else:
+#     print(False),
+#     print(type(False))
+
+# #Q3:Write a program that checks if a number is between 10 and 50 (inclusive) using and.
+# num=40
+# results=num>10 and num<50
+# print(results)
+
+# #Q4: Check if a string entered by the user is equal to "Python"
+
+# string=str(input("Enter A String:"))
+# final_string=string="Pyhton"
+# print(final_string)
+
+# #Q5: Use the or operator to check if a user is either "Admin" or "Superuser".
+# user_role =str(input("Enter user role: "))
+
+# if user_role == "Admin" or user_role == "Superuser":
+#     print("Access granted.")
+# else:
+#     print("Access denied.")
+
+#Q6: Demonstrate the not operator by reversing a Boolean variable.
+# admin_is_saif=False
+# print(admin_is_saif)
+
+#Q7:Compare two floating-point numbers: 0.1 + 0.2 == 0.3. Explain the result
+# num1=0.1
+# num2=0.2
+# print("the result is :",num1+num2==0.3)
+
+#Q8: Take a user's age and check if they are NOT under 18.
+# age=int(input("Enter your age:"))
+# if not (age<=18):
+#     print("You are over 18" ),
+# else:
+#     print("you are under 18")
+   
+#Q9: Check if a number is positive and odd using logical operators.
+num=int(input("Enter a num:"))
+final_num=num%2==0
+print(final_num)
+#Method2
+num=int(input("Entre a num:"))
+if(num%2==0):
+    print("num is even and negitive"),
+else:
+    print("num is odd and positive")
+#Method3:(orignall method )
+num=int(input("enter a num:"))
+if num > 0 and num % 2 != 0:
+    print("Number is positive and odd")
+else:
+    print("Condition not satisfied")
+
+#Q10:Compare the lengths of two strings provided by the user.
+str1=str(input())
+str2=str(input())
+if(len(str1)==len(str2)):
+    print(True),
+else:
+    print(False)

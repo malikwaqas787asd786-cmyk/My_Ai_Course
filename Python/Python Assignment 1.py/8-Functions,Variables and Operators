@@ -1,0 +1,57 @@
+#part 1: I/O Functions (print and input)
+
+# #Q1: WAP to print "Hello, World!" and your name on two separate lines.
+# print("Hello, World!")
+# name = "Saif ali "
+# print(name)
+# print(type(name))
+# print(len(name))
+
+# #Q2: ask the user their favorite color using input() and print "your favorite color is <color>".
+# color = input("enter color:")
+# print("Your favorite color is :" + color)
+
+# #Q3: Use a single print statement to dispaly three different words separated by a hyphen.
+# print("apple", "banana", "orange", sep="-")
+
+# #Q4: prompt the user for their birth year and print their age (assume the current year is 2026).
+
+# birth_year=int(input("enter your birth year :"))
+# print(2026 - birth_year)
+
+# #Q5: print the results of 5+5 such that the output is: The sum of 5 and 5 is 10.
+# num1 = 5
+# num2 = 5
+# sum = num1+num2
+# print(sum)
+
+# #Q6: Use the end parameter of in print() to join seprate print statements with space .
+# print("saif", end=" ")
+# print("ali")
+
+# #Q7: WAP that takes two strings from the user and prints them joined together.
+# name= input("enter your first name :")
+# name2= input("enter your last name :")
+# print(name + " " + name2)
+
+# #Q8: Create a greeting that takes a user's name and prints "Welcome,[Name]!" in all uppercase.
+# name = input("enter your name :")
+# print(f"WELCOME,{name.upper()}!")
+
+# #Q9: Ask for a user's city and country , then print them in the formate: "City,Country".
+# city = input("enter your city :").strip()
+# country = input("enter your country :").strip()
+# print(f"{city},{country}")
+
+# #Q10:Experiment : What happens if you try to add a string and an integer in a print statements ?
+# #write a code snippet that fixes this using str()
+
+# num = 18 
+# print(type(num))
+# print("your number is :" +str(num))
+
+# #as for example
+# a=8
+# b=10
+# sum=a+b
+# print(sum)

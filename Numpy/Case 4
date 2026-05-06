@@ -1,0 +1,50 @@
+""""Reshaping and Manipulating Arrays in NumPy"""                   
+                        #Reshaping Arrays
+import numpy as np
+array_1d=np.array([1,2,3,4,5,6])
+array_2d=array_1d.reshape(2,3)  #Reshape to 2 rows and 3 columns
+print(array_2d)
+
+import numpy as np
+array_2d=np.array([[1,2,3],
+                   [4,5,6]])
+array_1d=array_2d.reshape(-1)  #Reshape to 1D array, -1 infers the size automatically
+print(array_1d)
+
+import numpy as np
+array_2d=np.array([[1,2,3],
+                   [4,5,6]])
+array_1d=array_2d.flatten()  #Flatten the 2D array to 1D
+arr_1d=array_2d.ravel()  #Ravel the 2D array to 1D (similar to flatten but returns a view if possible)
+print(array_1d)
+print(arr_1d)
+    
+                        # Manipulating Arrays
+#np.insert(array, index, value, axis ) to insert a value at a specific index
+import numpy as np
+arr=np.array([1,2,3,4,5])
+arr=np.insert(arr, 2, 10)  #Insert 10 at index 2
+print(arr)
+
+arr_2d=np.array([[1,2,3],
+                 [4,5,6]])
+new_arr=np.insert(arr_2d, 1, [10,20,30], axis=0)  #Insert a new row at index 1
+print(new_arr)
+
+
+# np.append(array, value, axis) to append a value to the end of an array
+import numpy as np
+arr=np.array([1,2,3,4,5])
+new_arr=np.append(arr, 6)  #Append 6 to the end of the array
+print(new_arr)
+
+arr_2d=np.array([[1,2,3],
+                 [4,5,6]])
+new_arr_2d=np.append(arr_2d, [[7,8,9]], axis=0)  #Append a new row to the 2D array
+print(new_arr_2d)
+
+#np.concatenate((array1, array2), axis) to concatenate two arrays along a specified axis
+import numpy as np
+arr1=np.array([1,2,3])
+arr2=np.array([4,5,6])
+new_arr=np.concatenate((arr1, arr2))  #Concatenate along the default axis (1D)

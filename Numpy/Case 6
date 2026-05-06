@@ -1,0 +1,26 @@
+"""Handling Missing and Special Values in NumPy Arrays"""
+
+ #np.isnan(array) to identify missing values
+import numpy as np
+arr=np.array([1,2,3,np.nan,5,np.nan])
+print(np.isnan(arr))
+
+
+#nan_to_num() to replace missing values with a specified value
+import numpy as np
+arr=np.array([1,2,3,np.nan,5,np.nan])
+new_arr=np.nan_to_num(arr) #by default it replaces nan with 0
+print(new_arr)
+
+arr=np.array([1,2,3,np.nan,5,np.nan])
+new_arr=np.nan_to_num(arr,nan=3)
+print(new_arr)
+
+#np.isinf(array) to identify infinite values
+import numpy as np
+arr=np.array([1,2,3,np.inf,5,-np.inf])
+print(np.isinf(arr))
+
+arr=np.array([1,2,3,np.inf,5,-np.inf])
+new_arr=np.where(np.isinf(arr),0,arr) #replace inf with 0
+print(new_arr)

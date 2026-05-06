@@ -1,0 +1,97 @@
+# Beginner Level (Strings Fundamentals) 
+# #Q1. Length of a String 
+# '''Write a program that reads a string and prints its length. 
+# o Input: "hello world" → Output: 11 
+# Hint: Use len(s). '''
+
+#  s=str(input())
+# print(len(s))
+
+# #Q2.Uppercase & Lowercase 
+# '''Convert the input string to uppercase and lowercase. 
+# o Input: "Python3" → Output: "PYTHON3", "python3" 
+# Hint: Methods: s.upper(), s.lower(). '''
+# s=str(input())
+# print(s.upper())
+# print(s.lower())
+
+#Q3. Count a Character 
+'''Count how many times a given character appears in a string (case-sensitive). 
+o Input: "banana", "a" → Output: 3 
+Hint: Use s.count(ch). '''
+
+# s = "banana"
+# ch = "a"
+# result = s.count(ch)
+# print(result)  
+
+#Q4.First & Last Character 
+'''
+Print the first and last character of a string; handle empty input. 
+o Input: "drawer" → Output: First: d, Last: r 
+Hint: Check empty with if not s; index via s[0] and s[-1]. '''
+
+# s = input("Enter a string: ")
+
+# if not s:
+#     print("String is empty.")
+# else:
+#     print("First:", s[0], "Last:", s[-1])
+
+
+#Q5. Check Substring Presence 
+'''Check if a substring exists in a string. 
+o Input: "data science", "science" → Output: True 
+Hint: Use the in operator: sub in s.'''
+
+# s=str(input())
+# sub=input()
+# if sub in s :
+#     print(True)
+# else:
+#     print(False)
+
+#Q6.Slice a String 
+'''Print a substring from index start to end (exclusive). 
+o Input: "programming", 3, 8 → Output: "gramm" 
+Hint: Use slicing: s[start:end].'''
+
+# s=input()
+# print(s[3:8])
+
+#Q7.Reverse a String 
+'''Reverse the string. 
+o Input: "Python" → Output: "nohtyP" 
+Hint: Slicing trick: s[::-1]. '''
+
+# s='python'
+# print(s[::-1])
+
+#Q8.. Replace Substring 
+'''Replace all occurrences of a word with another (case-sensitive). 
+o Input: "I love apples. Apples are great!", "apples", "oranges" 
+o Output: "I love oranges. Apples are great!" 
+Hint: s.replace(old, new) replaces exactly matching cases. '''
+
+# s='I love apples. Apples are great'
+# old='apples'
+# new='oranges'
+# print(s.replace(old,new))
+
+#Q9.Split and Join 
+'''Split a sentence on spaces and join with -. 
+o Input: "split this sentence" → Output: "split-this-sentence" 
+Hint: s.split() then "-".join(words). '''
+
+# s="split this sentence"
+#  ch=s.split()
+# new="-".join(ch)
+# print(new)
+
+#Q10.Strip Whitespace 
+'''Remove leading and trailing spaces. 
+o Input: "   padded text  " → Output: "padded text" 
+Hint: Use s.strip(). '''
+
+# s= "   padded text  "
+# print(s.strip())

@@ -1,0 +1,57 @@
+#Part B — Python Tuples (10 Beginner Questions)
+# #Q1. Create a tuple t = (10, 20, 30) and print the second element.
+# #Tip: Tuples use indexing: t[1].
+# t = (10, 20, 30)
+# x=t[1]
+# print("second element is:",x)
+
+# #Q2.Find the length of tuple ('a', 'b', 'c').
+# #Tip: Use len().
+# t=('a', 'b', 'c')
+# print(len(t),t)
+
+# #Q3.Unpack the tuple (4, 5) into variables x and y.
+# #Tip: x, y = (4, 5).
+# t= (4, 5)
+# x,y=t
+# print(x,y)
+
+# #Q4.Check if 'b' is in the tuple ('a', 'b', 'c').
+# #Tip: Use 'b' in tuple.
+# t=('a', 'b', 'c')
+# print('b' in t)
+
+# #Q5.Create an empty tuple and print its type.
+# #Tip: Empty tuple is ().
+# t=()
+# print(type(t))
+
+# #Q6.Concatenate (1, 2) and (3, 4) into a new tuple.
+# #Tip: Use + operator
+# t=(1,2)
+# n=(3,4)
+# m=t+n
+# print(type(m),m)
+
+# #Q7. Repeat (7,) three times.
+# #Tip: Use tuple * number.
+# t=(7,)
+# t*=3
+# print(t)
+
+# #Q8.Find the index of 2 in (1, 2, 3, 2).
+# #Tip: Use index() method.
+# t=(1, 2, 3, 2)
+# x=t.index(2)
+# print("index of 2 in t:",x)
+
+# #Q9.Count how many times 2 appears in (1, 2, 3, 2).
+# #Tip: Use count() method.
+# t=(1, 2, 3, 2)
+# x=t.count(2)
+# print("2 appears in t:",x)
+
+# #Q10:Create a single‑ element tuple containing the value 5.
+# #Tip: Remember to use a comma: (5,).
+# t=(5,)
+# print(type(t),t)
